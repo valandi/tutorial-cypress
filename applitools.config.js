@@ -1,3 +1,3 @@
 module.exports = {
-   concurrency: 100
-  }
+    concurrency: 100,
+}
