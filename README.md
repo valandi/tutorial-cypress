@@ -11,8 +11,7 @@
     * Linux/Mac: export APPLITOOLS_API_KEY=<your_key>
     * Windows: set APPLITOOLS_API_KEY=<your_key>
 4. run `npm install`
-5. run `npx cypress open`
-6. run the tests example INTEGRATION TESTS > examples > ultraFastGrid.spec.js
+5. run `npm test`
 
 ### Add Applitools to the existing project
 1. Set up environment variable `APPLITOOLS_API_KEY` with your own API key.
