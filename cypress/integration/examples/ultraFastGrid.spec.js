@@ -1,27 +1,20 @@
-describe("Demo app", () => {
+describe("AppTest", () => {
 
-    it(`Ultrafast Grid`, function () {
+    it(`ultraFastTest`, function () {
+        // Navigate to the url we want to test
+        // ⭐️ Note to see visual bugs, run the test using the above URL for the 1st run.
+        // but then change the above URL to https://demo.applitools.com/index_v2.html
+        // (for the 2nd run)
+        cy.visit('https://demo.applitools.com');
+
+        // Call Open on eyes to initialize a test session
         cy.eyesOpen({
             appName: 'Demo App',
             testName: 'Ultrafast grid demo',
-            browser: [
-                {width: 800, height: 600, name: "chrome"},
-                {width: 700, height: 500, name: "firefox"},
-                {width: 1600, height: 1200, name: "ie11"},
-                {width: 1024, height: 768, name: "edgechromium"},
-                {width: 800, height: 600, name: "safari"},
-                {
-                    deviceName: 'iPhone X',
-                    screenOrientation: 'portrait'
-                },
-                {
-                    deviceName: 'Pixel 2',
-                    screenOrientation: 'portrait'
-                },
-            ],
-            batchName: 'Ultrafast Batch'
         })
-        cy.visit('https://demo.applitools.com');
+
+        // check the login page with fluent api, see more info here
+        // https://applitools.com/docs/topics/sdk/the-eyes-sdk-check-fluent-api.html
         cy.eyesCheckWindow({
             tag: "Login Window",
             target: 'window',
@@ -30,12 +23,14 @@ describe("Demo app", () => {
 
         cy.get('#log-in').click()
 
+        // Check the app page
         cy.eyesCheckWindow({
             tag: "App Window",
             target: 'window',
             fully: true
         });
 
+        // Call Close on eyes to let the server know it should display the results
         cy.eyesClose()
     });
 
