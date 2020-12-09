@@ -1,5 +1,5 @@
 module.exports = {
-    concurrency: 1,
+    testConcurrency: 1,
     apiKey: 'APPLITOOLS_API_KEY',
     //
     browser: [
