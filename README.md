@@ -1,7 +1,7 @@
 # Applitools Tutorial - Cypress
 
-## Pre-requisites:
-1. Install Node.js from [here](https://nodejs.org/en/)
+## Pre-Requisites
+* Install Node.js from [here](https://nodejs.org/en/)
 
 ## Run the Example Project
 1. Download the example
@@ -26,7 +26,13 @@ npm install @applitools/eyes-cypress --save-dev
 
 Follow along with the example in this repository for adding Applitools Eyes along with your existing tests.
 
-## Cypress tutorial
+## GitHub Action CI/CD Example
+
+This repository includes an example of how you can integrate Applitools Eyes into your CI/CD process whether with GitHub Actions or a variety of other tools:
+
+https://github.com/applitools/tutorial-cypress/blob/master/.github/workflows/test.yml
+
+## Cypress SDK Tutorial
 
 Find the tutorial at: https://applitools.com/tutorials/cypress.html
 
