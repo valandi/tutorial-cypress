@@ -1,5 +1,7 @@
 # Applitools Tutorial - Cypress
 
+Get started with automated visual testing using the Applitool Eyes Cypress SDK.
+
 ## Pre-Requisites
 * Install Node.js from [here](https://nodejs.org/en/)
 
