@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - run: npm install
+
+      - run: npm install -g npm-check-updates
+
+      - name: Check for Updates
+        run: ncu -u
+    
+      - name: Install Updates
+        run: npm install
+      
+      - name: Create Pull Request with Updates
+        uses: peter-evans/create-pull-request@v3
+        with:
+          delete-branch: true
