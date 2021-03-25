@@ -35,10 +35,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: 'master'
-      
-#       - name: Create Pull Request with Updates
-#         uses: peter-evans/create-pull-request@v3
-#         with:
-#           delete-branch: true
-#           token: ${{ secrets.APPLITOOLSUPDATEBOT_TOKEN }}
-#          push-to-fork: applitoolsupdatebot/tutorial-images-javascript
