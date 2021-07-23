@@ -15,5 +15,4 @@ module.exports = {
     ],
     // set batch name to the configuration
     batchName: 'Demo Batch - Cypress',
-    showLogs: true
 }
